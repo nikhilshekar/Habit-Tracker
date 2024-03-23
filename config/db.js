@@ -6,12 +6,8 @@ const mongoose = require("mongoose");
 
 exports.connectMongoose = () => {
   mongoose.set("strictQuery", false);
-  // mongoose.connect(
-  //   "mongodb+srv://himadrinayak:12345@cluster0.h7n86ah.mongodb.net/csv-upload?retryWrites=true&w=majority",
-  //   { useNewUrlParser: true }
-  // );
   mongoose
-    .connect("mongodb://127.0.0.1:27017/habit-tracker", {
+    .connect("mongodb+srv://nikhilshekar:nikhil@cluster0.tufyorp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
       useNewUrlParser: true,
     })
     .then((e) => console.log("Connected to Mongodb"))
